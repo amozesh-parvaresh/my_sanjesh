@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مای سنجش من</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 20px 0;
+      font-size: 1.5rem;
+    }
+    main {
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    input, button {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>سامانه رتبه مای‌سنجش من</header>
+  <main>
+    <div class="card">
+      <h2>ورود رتبه شما 🎯</h2>
+      <input type="number" placeholder="رتبه کنکور خود را وارد کنید" id="rank" />
+      <button onclick="showRank()">نمایش نتیجه</button>
+      <p id="result"></p>
+    </div>
+  </main>
+
+  <script>
+    function showRank() {
+      const rank = document.getElementById('rank').value;
+      if (rank)
+        document.getElementById('result').innerText = رتبه شما ${rank} است 🌟;
+      else
+        document.getElementById('result').innerText = 'لطفاً رتبه را وارد کنید 😅';
+    }
+  </script>
+</body>
+</html>
